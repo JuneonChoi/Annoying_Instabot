@@ -1,12 +1,13 @@
 from instapy import InstaPy
 from instapy import smart_run
 
-username = '***************' #enter your username
-password = '***************' #enter your password
+my_username = input("Insert the username of your Instagram account : ") #enter your username
+my_password = input("Insert the password of your Instagram account : ") #enter your password
 
-profile = InstaPy(username= username,
-                  password= password,
+profile = InstaPy(username= my_username,
+                  password= my_password,
                   headless_browser= False,
+                  want_check_browser= False,
                   browser_executable_path= r"C:\Program Files\Mozilla Firefox\firefox.exe")
 
 with smart_run(profile):
